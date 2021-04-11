@@ -167,7 +167,7 @@ $mailer
 
 : exclamation : 들어오는 상호 작용을 확인하려면 스텁을 사용하고, 나가는 상호 작용을 확인하려면 mock을 사용하십시오. 더보기 : [Mock vs Stub](./#mock-vs-stub)
 
-## 이름 짓기
+## 이름 짓기 <a id="naming"></a>
 
 :heavy\_minus\_sign: 좋지 않음 :
 
@@ -251,7 +251,7 @@ public function deactivating_an_inactive_subscription_is_invalid(): void
 
 도메인과 관련된 모든 코드는 기술적인 세부 사항을 작성하지 않아야 합니다. 그렇지 않으면 프로그래머가 아닌 사람은 이 테스트를 읽을 수 없습니다. 그러면 도메인에 대해 이야기하고 싶을때, 테스트가 도메인이 하는 일이 무엇인지 아는 데 유용합니다. 기술적인 세부 사항을 설명하지마세요\(예를 들어 null반환, 예외 발생 등\). 이러한 종류의 정보는 도메인과 관련이 없으므로 이러한 키워드를 사용하면 안됩니다.
 
-## AAA 패턴
+## AAA 패턴 <a id="aaa-pattern"></a>
 
 일반적으로 Given, When, Then 이라고도 합니다.
 
@@ -275,7 +275,7 @@ public function aaa_pattern_example_test(): void
 }
 ```
 
-## 부모 객체
+## 부모 객체 <a id="object-mother"></a>
 
 이 패턴은 몇 가지 테스트에서 재사용 할 수있는 특정 개체를 만드는 데 도움이됩니다. 그 때문에 정렬 섹션이 간결하고 전체적으로 테스트가 더 읽기 쉬워집니다.
 
@@ -383,7 +383,7 @@ final class ExampleTest extends TestCase
 }
 ```
 
-## 두 학교의 단위 테스트
+## 두 학교의 단위 테스트 <a id="two-schools-of-unit-testing"></a>
 
 ### Classical \(디트로이트 학교\)
 
@@ -516,7 +516,7 @@ final class TestExample extends TestCase
 }
 ```
 
-## 세 가지 스타일의 단위 테스트
+## 세 가지 스타일의 단위 테스트 <a id="three-styles-of-unit-testing"></a>
 
 ### Output
 
@@ -636,7 +636,7 @@ final class ExampleTest extends TestCase
 }
 ```
 
-## 기능적 아키텍처 및 테스트
+## 기능적 아키텍처 및 테스트 <a id="functional-architecture-and-tests"></a>
 
 :x: 나쁨 :
 
@@ -750,7 +750,7 @@ final class ValidUnitExampleTest extends TestCase
 }
 ```
 
-## 관찰 가능한 동작과 구현 세부 정보
+## 관찰 가능한 동작과 구현 세부 정보 <a id="observable-behavior-vs-implementation-details"></a>
 
 :x: 나쁨 :
 
@@ -950,7 +950,7 @@ final class ValidTestExample extends TestCase
 
 :information\_source: 첫 번째 구독 모델의 디자인이 잘못되었습니다. 하나의 비즈니스 작업을 호출하려면 세 가지 메서드를 호출해야합니다. 또한 getter를 사용하여 작업을 확인하는 것은 좋은 방법이 아닙니다. `modifiedAt` 의 변경 확인을 건너 뛰고 `modifiedAt` 설정을 만료 비즈니스 작업으로 테스트 할 수 있습니다. `modifiedAt` 대한 getter는 필요하지 않습니다. 물론 테스트 용으로 만 제공되는 게터를 피할 수있는 가능성을 찾는 것이 매우 어려운 경우도 있지만 항상 도입하지 않도록 노력해야합니다.
 
-## 행동 단위
+## 행동 단위 <a id="unit-of-behavior"></a>
 
 :x: 나쁨 :
 
@@ -1430,7 +1430,7 @@ final class SubscriptionSuspendingTest extends TestCase
 }
 ```
 
-## 겸손한 패턴
+## 겸손한 패턴 <a id="humble-pattern"></a>
 
 이와 같은 클래스를 올바르게 단위 테스트하는 방법은 무엇입니까?
 
@@ -1545,7 +1545,7 @@ final class ChangingFormStatusTest extends TestCase
 
 그러나 ApplicationService는 모의 FormApiInterface 만 사용하는 통합 테스트로 테스트해야합니다.
 
-## 사소한 테스트
+## 사소한 테스트 <a id="trivial-test"></a>
 
 :x: 나쁨 :
 
@@ -1609,7 +1609,7 @@ final class EventSubscriberTest extends TestCase
 
 :exclamation: 복잡한 로직없이 코드를 테스트하는 것은 무의미하지만 깨지기 쉬운 테스트로 이어집니다.
 
-## 깨지기 쉬운 테스트
+## 깨지기 쉬운 테스트 <a id="fragile-test"></a>
 
 :x: 나쁨 :
 
@@ -1681,7 +1681,7 @@ final class TestUserRepository extends TestCase
 
 :exclamation: 이런식으로 리포지토리를 테스트하면 깨지기 쉬운 테스트가 만들어지고 리팩토링이 어렵습니다. 리포지터리를 테스트하려면 통합 테스트를 작성하십시오.
 
-## 테스트 픽스처
+## 테스트 픽스처 <a id="test-fixtures"></a>
 
 :x: 나쁨 :
 
@@ -1786,9 +1786,9 @@ final class ValidTest extends TestCase
   * private 팩토리 메소드-하나의 클래스에서 재사용 \(위와 같이\)
   * \[부모 객체\]\([https://gitlocalize.com/repo/6002/ko/\(\#object-mother](https://gitlocalize.com/repo/6002/ko/%28#object-mother)\)\) -몇 가지 클래스에서 재사용
 
-## 일반적인 테스트의 안티 패턴
+## 일반적인 테스트의 안티 패턴 <a id="general-testing-anti-patterns"></a>
 
-### 비공개 상태 노출
+### 비공개 상태 노출 <a id="exposing-private-state"></a>
 
 :x: 나쁨 :
 
@@ -1882,7 +1882,7 @@ final class ValidTest extends TestCase
 
 :exclamation: 테스트에서 상태를 확인하기 위해서만 추가 프로덕션 코드 \(예 : getter getCustomerType\(\)\)를 추가하는 것은 나쁜 습관입니다. 다른 도메인 중요한 값 \(이 경우 getPercentageDiscount \(\)\)으로 확인해야합니다. 물론 때로는 작업을 확인하는 다른 방법을 찾기가 어려울 수 있으며 테스트에서 정확성을 확인하기 위해 추가 프로덕션 코드를 추가해야 할 수 있지만 이를 피해야합니다.
 
-### 도메인 정보 유출
+### 도메인 정보 유출 <a id="leaking-domain-details"></a>
 
 ```php
 final class DiscountCalculator
@@ -1951,7 +1951,7 @@ final class ValidTest extends TestCase
 
 :information\_source: 테스트에서 실제 서비스의 로직을 복제하지 마십시오. 하드 코딩 된 값으로 결과를 확인하십시오.
 
-### 구체적인 클래스 모킹-mocking
+### 구체적인 클래스 모킹-mocking <a id="mocking-concrete-classes"></a>
 
 :x: 나쁨 :
 
@@ -2079,7 +2079,7 @@ final class ValidTest extends TestCase
 
 :information\_source: 행동의 일부를 대체하기 위해 구체적인 클래스를 모킹해야한다는 것은 이 클래스가 아마도 너무 복잡하고 단일 책임 원칙을 위반한다는 것을 의미합니다.
 
-### 비공개 메서드 테스트
+### 비공개 메서드 테스트 <a id="testing-private-methods"></a>
 
 ```php
 final class OrderItem
@@ -2196,7 +2196,7 @@ final class ValidTest extends TestCase
 
 :exclamation: 테스트는 공개 API 만 확인해야합니다.
 
-### 휘발성 의존성으로서의 시간
+### 휘발성 의존성으로서의 시간 <a id="time-as-a-volatile-dependency"></a>
 
 :information\_source: 시간은 비결정적이므로 휘발성 의존성입니다. 각 호출은 다른 결과를 반환합니다.
 
@@ -2363,11 +2363,11 @@ final class ValidTest extends TestCase
 
 :information\_source: 시간과 난수는 도메인 코드에서 직접 생성하면 안됩니다. 동작을 테스트하려면 결정적인 결과가 있어야하므로 위의 예에서와 같이 이러한 값을 도메인 개체에 삽입해야합니다.
 
-## 100 % 테스트 커버리지가 목표가되어서는 안됩니다.
+## 100 % 테스트 커버리지가 목표가되어서는 안됩니다. <a id="100-test-coverage-shouldnt-be-the-goal"></a>
 
 100 % 커버리지는 목표가 아니거나 심지어 바람직하지도 않습니다. 100 % 커버리지가 있다면 테스트가 매우 깨지기 쉬울 수 있으므로 리팩토링이 매우 어려울 것입니다. 돌연변이 테스트는 테스트의 품질에 대한 더 나은 피드백을 제공합니다. [더 읽어보기](https://sarvendev.com/en/2019/06/mutation-testing-we-are-testing-tests/)
 
-## 추천 도서
+## 추천 도서 <a id="recommended-books"></a>
 
 * [테스트 주도 개발 : 사례 별 / Kent Beck-](https://www.amazon.com/gp/product/0321146530/) 클래식
 * [단위 테스트 원리, 실습 및 패턴 / Vladimir Khorikov-](https://www.amazon.com/Unit-Testing-Principles-Practices-Patterns/dp/1617296279) 내가 읽은 테스트에 관한 최고의 책
