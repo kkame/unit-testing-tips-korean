@@ -165,7 +165,7 @@ $mailer
     ->with($this->equalTo($message));
 ```
 
-: exclamation : 들어오는 상호 작용을 확인하려면 스텁을 사용하고, 나가는 상호 작용을 확인하려면 mock을 사용하십시오. 더보기 : [Mock vs Stub](./#mock-vs-stub)
+:exclamation: 들어오는 상호 작용을 확인하려면 스텁을 사용하고, 나가는 상호 작용을 확인하려면 mock을 사용하십시오. 더보기 : [Mock vs Stub](./#mock-vs-stub)
 
 ## 이름 짓기 <a id="naming"></a>
 
@@ -520,7 +520,7 @@ final class TestExample extends TestCase
 
 ### Output
 
-: heavy\_check\_mark : 최상의 옵션 :
+:heavy\_check\_mark: 최상의 옵션 :
 
 * **리팩토링에 대한 최고의 내구성**
 * **최고의 정확성**
@@ -665,7 +665,7 @@ final class NameService
 
 **이와 같은 코드를 테스트하는 방법? 파일 시스템과 관련된 인프라 코드를 직접 사용하기 때문에 통합 테스트를 통해서만 가능합니다.**
 
-: heavy\_check\_mark : 좋음 :
+:heavy\_check\_mark: 좋음 :
 
 기능적 아키텍처와 마찬가지로 부작용이있는 코드와 논리 만 포함 된 코드를 분리해야합니다.
 
