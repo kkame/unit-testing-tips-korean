@@ -14,7 +14,7 @@
 4. [AAA 패턴](./#aaa-pattern)
 5. [부모 객체](./#object-mother)
 6. [매개 변수화 된 테스트](./#parameterized-test)
-7. [두 학교의 단위 테스트](./#two-schools-of-unit-testing)
+7. [두 학파의 단위 테스트](./#two-schools-of-unit-testing)
    * [Classical](./#classical)
    * [Mockist](./#mockist)
    * [의존성](./#dependencies)
@@ -383,9 +383,9 @@ final class ExampleTest extends TestCase
 }
 ```
 
-## 두 학교의 단위 테스트 <a id="two-schools-of-unit-testing"></a>
+## 두 학파의 단위 테스트 <a id="two-schools-of-unit-testing"></a>
 
-### Classical \(디트로이트 학교\)
+### Classical \(디트로이트 학파\)
 
 * 단위는 동작의 유닛 단위이며 몇 가지 관련 클래스가 될 수 있습니다.
 * 모든 테스트는 다른 테스트와 격리되어야합니다. 따라서 병렬로 또는 임의의 순서로 호출 할 수 있어야합니다.
@@ -409,7 +409,7 @@ final class TestExample extends TestCase
 }
 ```
 
-### Mockist \(런던 학교\)
+### Mockist \(런던 학파\)
 
 * 단위는 단일 클래스입니다.
 * 단위는 모든 공동 작업자로부터 격리되어야합니다.
